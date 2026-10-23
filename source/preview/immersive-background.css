@@ -1,0 +1,13 @@
+body.immersive-background{isolation:isolate;background:#05070f}
+#data-universe{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.immersive-background .blob,.immersive-background::after{display:none}
+.immersive-background::before{opacity:.16}
+.immersive-background .hero,.immersive-background section,.immersive-background footer{background:transparent}
+.immersive-background #projects{background:transparent}
+.immersive-background .hero-sub,.immersive-background .hero-tag,.immersive-background .section-tag,.immersive-background .tl-bullets,.immersive-background .about-text{text-shadow:0 1px 12px #05070f,0 0 28px #05070f}
+.immersive-background .skill-card,.immersive-background .ach-card,.immersive-background .writing-card{background:#0c1321df;backdrop-filter:blur(8px)}
+.immersive-background .hero h1{text-shadow:0 4px 55px #05070f99}
+@media(prefers-reduced-motion:reduce){#data-universe{opacity:.7}}
+
+/* The selected mesh stays atmospheric beneath the portfolio content. */
+.background-mesh #data-universe{opacity:.9}
