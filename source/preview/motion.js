@@ -25,14 +25,12 @@ prev.addEventListener('click',()=>scrollProject(-1));next.addEventListener('clic
 rail.addEventListener('keydown',e=>{if(e.target!==rail)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();scrollProject(e.key==='ArrowRight'?1:-1)}else if(e.key==='Home'||e.key==='End'){e.preventDefault();rail.scrollTo({left:e.key==='Home'?0:rail.scrollWidth,behavior:'instant'})}});
 // Source-supported results; numbers remain visible without motion.
 const mq=matchMedia('(prefers-reduced-motion: reduce)');
-let userMinimal=false,scope;
-const toggle=document.querySelector('#motion-toggle');
+const userMinimal=false;
+let scope;
 function setupMotion(){
  scope?.revert();
  const reduced=mq.matches||userMinimal;
  document.body.classList.toggle('minimal-motion',reduced);
- toggle.textContent=reduced?'Motion off':'Motion on';
- toggle.setAttribute('aria-pressed',String(reduced));
  document.querySelectorAll('[data-count]').forEach(el=>el.textContent=el.dataset.count);
  if(reduced)return;
  const mobile=matchMedia('(max-width: 768px)').matches;
@@ -45,7 +43,6 @@ function setupMotion(){
   document.querySelectorAll('[data-count]').forEach(el=>{const value={n:0};animate(value,{n:Number(el.dataset.count),duration:1300,ease:'out(3)',onUpdate:()=>el.textContent=Math.round(value.n),autoplay:onScroll({target:el,repeat:false})})});
  });
 }
-toggle.addEventListener('click',()=>{userMinimal=!userMinimal;setupMotion()});
 mq.addEventListener('change',setupMotion);
 document.querySelectorAll('.case-study').forEach(details=>{
  let running;

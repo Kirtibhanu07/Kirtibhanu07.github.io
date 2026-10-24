@@ -1,0 +1,6 @@
+.gallery-art.cream-cover{display:block;padding:0;background:linear-gradient(135deg,#fffdf8,#f4eedf);height:auto;aspect-ratio:16/9;overflow:hidden}
+.gallery-art.cream-cover.ocr{background:linear-gradient(135deg,#fff,#f6f4ed)}
+.cream-cover svg{display:block;width:100%;height:100%;font-family:'DM Sans',sans-serif;max-height:none}
+.cover-title{font-size:16px;letter-spacing:1px;font-weight:700;fill:#324159}.cover-subtitle{font-size:13px;fill:#627084}.cover-grid{stroke:#77869a;stroke-opacity:.18;fill:none}.cover-line{stroke-width:3.5;stroke-linejoin:round;stroke-linecap:round;fill:none}.cover-bar{transform-box:fill-box;transform-origin:bottom}
+.cream-cover .image-expand{background:#12283f;color:#fff;border-color:#93a8bc}
+@media(prefers-reduced-motion:reduce){.cream-cover *{animation:none!important;transition:none!important}}
